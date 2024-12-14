@@ -15,7 +15,7 @@ C:/raylib/w64devkit/bin/mingw32-make.exe RAYLIB_PATH=C:/raylib/raylib PROJECT_NA
 5. 開始玩
 
 ### 遊戲規則
-![image](https://hackmd.io/_uploads/HJ5LwloVkl.png)
+
 * 地圖：25x25的方格，座標與二維陣列的索引相同 ([複習](https://hackmd.io/ST-iVaPlRqKrosaQgjGXkg))
 * 玩家：分為黑蛇與白蛇
   * 黑蛇能用方向鍵控制
