@@ -270,22 +270,29 @@ int main()
         BeginDrawing();
 
         if (EventTriggered(0.2))
-        {    
+        {   
+
+#ifdef SCRIPT_1
             if (allowMove1 == true){
                 processScript(game, 1);
             }
+#endif
             game.Update();
             game.turn = (game.turn == 1)? 2 : 1;
 
+#ifdef SCRIPT_2
             if (allowMove2 == true){
                 processScript(game, 2);
             }
+#endif
             game.Update();
             game.turn = (game.turn == 1)? 2 : 1;
 
             allowMove1 = true;
             allowMove2 = true;
         }
+
+#ifdef MANUAL_1
 
         if (IsKeyPressed(KEY_UP) && game.snake1.direction.y != 1 && allowMove1)
         {
@@ -311,6 +318,9 @@ int main()
             game.running = true;
             allowMove1 = false;
         }
+#endif
+
+#ifdef MANUAL_2
 
         if (IsKeyPressed(KEY_W) && game.snake2.direction.y != 1 && allowMove2)
         {
@@ -336,6 +346,7 @@ int main()
             game.running = true;
             allowMove2 = false;
         }
+#endif
 
         // Drawing
         ClearBackground(green);
